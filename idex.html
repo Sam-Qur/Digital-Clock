@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Digital Watch</title>
+</head>
+<body>
+	
+	<div class="watch">
+		<h2>Digital Clock</h2>
+		<div class="container">
+
+			<div class="clock">
+				
+				<span id="hrs">00</span>
+				<span>:</span>
+				<span id="min">00</span>
+				<span>:</span>
+				<span id="sec">00</span></br>
+			</br>
+		</div>
+	</br>
+	
+
+		<h4>Time has the power to change black coal into shiny diamond.</h4>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let hrs =document.getElementById("hrs");
+		let min =document.getElementById("min");
+		let sec =document.getElementById("sec");
+
+		setInterval(()=>{
+			let currentTime = new Date();
+
+			hrs.innerHTML = (currentTime.getHours()<10?"0":"")+currentTime.getHours();
+			min.innerHTML = (currentTime.getMinutes()<10?"0":"")+currentTime.getMinutes();
+			sec.innerHTML = (currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
+
+		}, 1000)
+
+	</script>
+
+	
+</body>
+</html>
